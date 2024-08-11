@@ -1,0 +1,25 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+
+
+const name = 'Elian Villamarin';
+---
+
+
+<MainLayout title = "Home">
+
+	
+	
+		<h1>{name}</h1>
+		<p> Hora actual : 1:48 pm</p>
+		<p class="hora"></p>
+		
+		
+		<script>
+			const hora = document.querySelector('.hora') as HTMLParagraphElement;
+			const date = new Date();
+			hora.textContent = date.toLocaleTimeString();
+			
+			</script>
+
+</MainLayout>
